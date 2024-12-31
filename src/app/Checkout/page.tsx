@@ -53,7 +53,7 @@ export default function CheckoutPage() {
                   />
                   <div>
                     <h3 className="font-normal text-xl">{item.title}</h3>
-                    <p className="text-gray-500">${item.price} x {item.quantity}</p>
+                    <p className="text-gray-500">Price: ${item.price} x {item.quantity}</p>
                   </div>
                 </div>
               </div>

@@ -63,9 +63,9 @@ export default function CartPage() {
                   className="w-24 h-24 object-contain border rounded-lg"
                 />
                 <div>
-                  <h2 className="font-normal text-xl">{item.title}</h2>
+                  <h2 className="font-normal text-[14px] sm:text-[16px] lg:text-[24px]">{item.title}</h2>
                   <p className="text-gray-500">
-                    ${item.price} x {item.quantity}
+                   Price:  ${item.price} x {item.quantity}
                   </p>
                 </div>
               </div>

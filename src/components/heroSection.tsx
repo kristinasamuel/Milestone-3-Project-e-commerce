@@ -2,11 +2,11 @@
 export default function heroSection() {
   return (
     <div className="flex flex-col items-center justify-center mt-10 sm:mt-20 lg:mt-20 ">
-      <h2 className="text-[32px] sm:text-[34px] lg:text-[38px] font-bold text-center">
+      <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-center">
         {/* Main heading */}
         Welcome to Your Ultimate Shopping Destination.
       </h2>
-      <p className="mt-4 font-medium text-[22px] text-gray-600 text-center">
+      <p className="mt-2 font-medium text-[22px] text-gray-600 text-center">
         Here, you can find everything you need, all in one place!
       </p>
       {/* Banner section */}
