@@ -32,7 +32,7 @@ export default function CartPage() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-4 mt-10 sm:mt-20 lg:mt-20">
+    <div className="max-w-6xl mx-auto p-4 mt-10 sm:mt-20 lg:mt-20 mb-10">
       {/* heading */}
       <h3 className="text-[32px] sm:text-[34px] lg:text-[40px] font-bold text-center">
         Review Your Cart
