@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Card } from "@/components/ui/card";
 
 // Product type
 interface IProduct {
@@ -69,7 +70,7 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="w-full lg:max-w-5xl mx-auto p-0 lg:p-4 mt-10 sm:mt-20 lg:mt-20 ">
+    <div className="w-full flex flex-col items-center justify-center mx-auto p-0 lg:p-4 mt-10 sm:mt-20 lg:mt-20 ">
       <h1 className="text-[42px] font-bold text-center">New Arrival</h1>
       <p className="text-[22px] text-gray-600 text-center mt-2">
         Discover the latest trends and styles with our exclusive collection.
@@ -83,11 +84,12 @@ export default function ProductPage() {
 
       {error && <p className="text-red-500">{error}</p>}
       {/* Display product detail ,image,price */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+      {/* <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 items-center justify-center"> */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 justify-center items-center mx-auto p-4">
         {products.map((product) => (
-          <div
+          <Card
             key={product.id}
-            className="border rounded-lg p-4 bg-white  shadow-sm"
+            className="border rounded-lg p-2 bg-white shadow-sm "
           >
             <img
               src={product.image}
@@ -96,7 +98,7 @@ export default function ProductPage() {
               width={100}
               className="w-full h-40 object-contain"
             />
-            <div className="mt-4 space-y-1">
+            <div className="mt-4 space-y-1 text-center lg:text-left">
               <h2 className="font-medium text-[14px] ">{product.title}</h2>
               <p className="text-gray-600 ">${product.price}</p>
               <Link href={`Products/${product.id}`}>
@@ -104,16 +106,16 @@ export default function ProductPage() {
                   Product Detail...
                 </p>
               </Link>
-              <div className="flex flex-row gap-4">
+              
                 <Button
                 variant={"destructive"}
                   className="mt-3"
                   onClick={() => handleAddToCart(product)}>
                   Add to Cart
                 </Button>
-              </div>
+             
             </div>
-          </div>
+          </Card>
         ))}
       </div>
       {/* Thanks message */}

@@ -18,7 +18,6 @@ export default function heroSection() {
           <h2 className="font-bold text-red-500  text-[36px] lg:text-[42px] text-center ">
             Be Smart, Shop Online
           </h2>
-
           <h3 className="text-[#ffffff] text-[28px] lg:text-[34px] font-semibold text-center">
             Shop the Best Deals Now!
           </h3>
